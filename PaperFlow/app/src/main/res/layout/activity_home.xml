@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        app:theme="@style/ToolbarColoredBackArrow"
+        app:popupTheme="@style/AppTheme" />
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/tabLayout"/>
+    <LinearLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:weightSum="10"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/progressLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.8">
+            <ImageView
+                android:id="@+id/progressImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/progress_imageview_selector"
+                android:layout_centerHorizontal="true"
+                android:clickable="true"
+                android:layout_centerVertical="true"/>
+
+            <View
+                android:id="@+id/progressView"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@drawable/rounded_line"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.8">
+            <ImageView
+                android:id="@+id/bookImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/book_imageview_selector"
+                android:layout_centerHorizontal="true"
+                android:clickable="true"
+                android:layout_centerVertical="true"/>
+            <View
+                android:id="@+id/bookView"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@drawable/rounded_line"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.8"
+            android:weightSum="2"
+            android:orientation="vertical">
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.8">
+            <ImageView
+                android:id="@+id/bulbImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bulb_imageview_selector"
+                android:layout_centerHorizontal="true"
+                android:clickable="true"
+                android:layout_centerVertical="true"/>
+            <View
+                android:id="@+id/bulbView"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@drawable/rounded_line"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.8">
+            <ImageView
+                android:id="@+id/profileImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/progress_imageview_selector"
+                android:clickable="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"/>
+            <View
+                android:id="@+id/profileView"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@drawable/rounded_line"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:visibility="gone"
+                android:layout_marginRight="@dimen/dp_10"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tabLayout"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/tab_shadow" />
+    <ImageView
+        android:id="@+id/cameraImageview"
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="@dimen/dp_80"
+        android:layout_alignParentBottom="true"
+        android:clickable="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:src="@drawable/camera_imageview_selector" />
+
+
+</RelativeLayout>

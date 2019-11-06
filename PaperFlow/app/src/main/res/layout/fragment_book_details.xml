@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_20">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.7"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/title_color"
+                android:textSize="@dimen/sp_18"
+                android:textStyle="bold"
+                android:text="Gujarat Darshan:2500 Questings"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/sp_12"
+                android:text="Text describing the book. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor… read more"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Added on: 20th Mar 2019"
+        android:textColor="@color/gray"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp_10"
+        android:textSize="@dimen/sp_14"/>
+
+    <View
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="1dp"
+        android:background="@color/edittext_border_color"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp_10"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skills"
+            android:textColor="@color/title_color"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/dp_10"
+            android:textSize="@dimen/sp_16"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View All"
+            android:textColor="@color/selected_button_text_color"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:drawableRight="@drawable/right_arrow"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:textSize="@dimen/sp_14"/>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/MyProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_10"
+        android:scaleY="1"
+        android:layout_marginTop="@dimen/dp_10"
+        android:indeterminate="false"
+        android:progressDrawable="@drawable/progress_drawable"
+        android:progress="50"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="25 skills not practised"
+        android:textColor="@color/gray"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp_10"
+        android:textSize="@dimen/sp_14"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Learning Journey"
+        android:textColor="@color/title_color"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/dp_30"
+        android:textSize="@dimen/sp_16"/>
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+    </ListView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_20"
+        android:orientation="vertical"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_80"
+            android:src="@drawable/idea"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Learnings Found!"
+            android:textColor="@color/edittext_border_color"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_10"
+            android:textSize="@dimen/sp_14"/>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
+</ScrollView>

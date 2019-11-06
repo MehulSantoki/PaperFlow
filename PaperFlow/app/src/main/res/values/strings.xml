@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">PaperFlow</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="email">Email</string>
+    <string name="login_with_otp">Login with OTP</string>
+    <string name="signup_with_otp">Signup with OTP</string>
+    <string name="login">Login</string>
+    <string name="signup">Signup</string>
+    <string name="verify_num">Verify Phone Number</string>
+    <string name="verify">Verify</string>
+    <string name="create_profile">Create your profile</string>
+    <string name="create_account">Create Account</string>
+    <string name="revocer_password">Recover Password</string>
+    <string name="send_otp">Send OTP</string>
+    <string name="set_new_pass">Set New Password</string>
+    <string name="create_new_pass">Create New Password</string>
+
+
+
+</resources>

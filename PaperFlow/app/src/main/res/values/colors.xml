@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#dd6243</color>
+    <color name="white">#FFFFFF</color>
+    <color name="app_name_title_color">#3b4b69</color>
+    <color name="title_color">#01204a</color>
+    <color name="gray">#a4a9af</color>
+    <color name="dark_gray">#707a85</color>
+    <color name="selected_button_bg">#e6eef8</color>
+    <color name="selected_button_text_color">#005792</color>
+    <color name="login_btn_bg">#419AF9</color>
+    <color name="edittext_border_color">#d2d7e1</color>
+    <color name="orange">#dd6243</color>
+    <color name="red">#f85359</color>
+    <color name="yellow">#ffb24d</color>
+    <color name="green">#54d566</color>
+    <color name="pale_gray">#f5f8fd</color>
+</resources>

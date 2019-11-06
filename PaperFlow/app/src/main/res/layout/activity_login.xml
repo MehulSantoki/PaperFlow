@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/dp_20"
+    android:paddingRight="@dimen/dp_20">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/dp_20">
+
+        <TextView
+            android:id="@+id/loginTextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Dont't have PaperFlow Account?"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/sp_14" />
+        <TextView
+            android:id="@+id/signupTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginLeft="2dp"
+            android:textColor="@color/selected_button_text_color"
+            android:text="@string/signup"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:onClick="onClickSignup"
+            android:textSize="@dimen/sp_14"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/appNameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp_20"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/paper_plane" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/app_name"
+            android:textStyle="bold"
+            android:textSize="@dimen/sp_20"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:textColor="@color/app_name_title_color"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/welcome_back"
+        android:textStyle="bold"
+        android:textSize="@dimen/sp_24"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:textColor="@color/title_color"
+        android:layout_below="@+id/appNameLayout"
+        android:layout_centerHorizontal="true"
+       android:layout_marginTop="@dimen/dp_30"
+        />
+
+    <TextView
+        android:id="@+id/loginTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Login to your PaperFlow account"
+        android:textSize="@dimen/sp_16"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:textColor="@color/gray"
+        android:layout_below="@+id/titleTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_5"
+        />
+
+    <LinearLayout
+        android:id="@+id/phoneBtnLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/loginTextView"
+        android:layout_marginTop="@dimen/dp_35"
+        android:weightSum="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/phoneButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_50"
+            android:layout_weight="0.5"
+            android:text="@string/phone_number"
+            android:gravity="center"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold"
+            android:textColor="@color/selected_button_text_color"
+            android:background="@drawable/blue_button_bg"/>
+        <TextView
+            android:id="@+id/emailButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_50"
+            android:layout_weight="0.5"
+            android:text="@string/email"
+            android:gravity="center"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold"
+            android:textColor="@color/gray"
+            android:background="@color/white"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/phoneEmailRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phoneBtnLayout"
+        android:layout_marginTop="@dimen/dp_30">
+
+        <EditText
+            android:id="@+id/emailEdittext"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:paddingLeft="@dimen/dp_10"
+            android:hint="Email or Phone Number"
+            android:textSize="@dimen/sp_16"
+            android:visibility="gone"
+            android:background="@drawable/form_number_bg"
+            />
+        <LinearLayout
+            android:id="@+id/phoneNumberLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:padding="@dimen/dp_10"
+            android:background="@drawable/form_number_bg">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="0.25"
+                android:gravity="center">
+                <com.rilixtech.widget.countrycodepicker.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:ccp_hideNameCode="true"
+                    android:textColor="@color/title_color"
+                    app:ccp_defaultCode="91"
+                    app:ccp_showFullName="false"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="0.75">
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    />
+
+                <EditText
+                    android:id="@+id/numberEdittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:inputType="phone"
+                    android:hint="Phone Number"
+                    android:textColor="@color/title_color"
+                    android:maxLength="10"
+                    android:textSize="@dimen/sp_16"
+                    android:paddingRight="@dimen/dp_10"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+
+    <EditText
+        android:id="@+id/passEdittext"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:layout_below="@+id/phoneEmailRl"
+        android:inputType="textPassword"
+        android:paddingLeft="@dimen/dp_10"
+        android:hint="Password"
+        android:textSize="@dimen/sp_16"
+        android:textColor="@color/title_color"
+        android:visibility="gone"
+        android:background="@drawable/form_number_bg"
+        android:layout_marginTop="@dimen/dp_10"/>
+
+    <TextView
+        android:id="@+id/errorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/passEdittext"
+        android:layout_marginTop="@dimen/dp_5"
+        android:textSize="@dimen/sp_14"
+        android:gravity="center"
+        android:textColor="@color/red"/>
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@drawable/login_button_bg"
+        android:textSize="@dimen/sp_18"
+        android:textColor="@color/white"
+        android:text="@string/login_with_otp"
+        android:alpha="0.5"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:layout_below="@+id/errorTextView"
+        android:layout_marginTop="@dimen/dp_20"/>
+
+</RelativeLayout>

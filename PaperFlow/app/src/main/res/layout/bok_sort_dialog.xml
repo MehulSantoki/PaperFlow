@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dp_20"
+    android:layout_margin="@dimen/dp_10"
+    android:background="@drawable/progress_dialog_bg">
+
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Sort books by"
+        android:textStyle="bold"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/gray"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleTextView"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_centerHorizontal="true">
+
+        <RadioGroup
+            android:id="@+id/radioSort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <RadioButton
+                android:id="@+id/lastRadio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Last Opend"
+                android:layoutDirection="rtl"
+                android:paddingRight="@dimen/dp_45"
+                android:textAlignment="textStart"
+                android:textColor="@color/title_color"
+                android:textSize="@dimen/sp_16"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/ascRadio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layoutDirection="rtl"
+                android:paddingRight="@dimen/dp_45"
+                android:textAlignment="textStart"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/sp_16"
+                android:text="Name Ascending" />
+
+            <RadioButton
+                android:id="@+id/descRadio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layoutDirection="rtl"
+                android:textAlignment="textStart"
+                android:paddingRight="@dimen/dp_45"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/gray"
+                android:text="Name Descending" />
+
+            <RadioButton
+                android:id="@+id/dateRadio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layoutDirection="rtl"
+                android:textAlignment="textStart"
+                android:paddingRight="@dimen/dp_45"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/sp_16"
+                android:text="Date Added" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/applyButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:background="@drawable/login_button_bg"
+            android:textSize="@dimen/sp_18"
+            android:textColor="@color/white"
+            android:text="Apply"
+            android:alpha="0.5"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:layout_below="@+id/radioSort"
+            android:layout_marginTop="@dimen/dp_20"/>
+
+        <TextView
+            android:id="@+id/cancelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold"
+            android:text="Cancel"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/applyButton"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_20"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>
